@@ -9,7 +9,4 @@ let evaluationMetrics = sentimentClassifier.evaluation(on: testingData, textColu
 let accuracy = (1.0 - evaluationMetrics.classificationError) * 100
 let metaData = MLModelMetadata(author: "Suman Sigdel", shortDescription: "Twitter Sentiment Analyser Model", version: "1.0")
 try sentimentClassifier.write(to: URL(fileURLWithPath: "/Users/sumansigdel/Downloads/TwitterSentimentClassifier.mlmodel"))
-
-///try sentimentClassifier.prediction(from: "RSR coin will dump soon")
-
-//try sentimentClassifier.prediction(from: "I love cocacola")
+///try sentimentClassifier.prediction(from: "Word to try the sentiment analysis on")
