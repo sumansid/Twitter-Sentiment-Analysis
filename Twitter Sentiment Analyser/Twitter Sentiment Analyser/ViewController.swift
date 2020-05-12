@@ -46,7 +46,7 @@ class ViewController: UIViewController {
                            
                        }
                        do {
-                        
+               
                            let predictions = try self.tSentimentClassifier.predictions(inputs: tweets)
                            var sentimentScore = 0
                            for prediction in predictions {
@@ -71,11 +71,8 @@ class ViewController: UIViewController {
                             self.sentimentLabel.text = "😈"
                         }else if sentimentScore > -15 {
                             self.sentimentLabel.text = "☹️"
-                        }else if sentimentScore > -25 {
+                        }else sentimentScore > -25 {
                             self.sentimentLabel.text = "😡"
-                        }else {
-                            self.sentimentLabel.text = "😡💩🤮"
-                            
                         }
                            
                        } catch {
@@ -91,8 +88,6 @@ class ViewController: UIViewController {
                }
                
     }
-    
-
-
+   
 }
 
