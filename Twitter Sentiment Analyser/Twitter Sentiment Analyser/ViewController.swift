@@ -19,17 +19,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     
     let tSentimentClassifier = TwitterSentimentClassifier()
-    // Instantiation using Twitter's OAuth Consumer Key and secret
+    
     let swifter = Swifter(consumerKey: "LTReJyreyyuz4SWjVABuA1WKI", consumerSecret: "ajf107xfd6869heCG8Ptn8iztfFHBWPIxLkFGvsmoEwI7MKZcz")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        let prediction = try! tSentimentClassifier.prediction(text: "I hate @apple")
-//        print(prediction.label)
-        
-        // Do any additional setup after loading the view.
-       
+
     }
     
     @IBAction func checkButtonPressed(_ sender: UIButton) {
