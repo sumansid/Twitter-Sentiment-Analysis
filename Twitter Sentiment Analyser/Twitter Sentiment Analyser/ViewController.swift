@@ -13,18 +13,16 @@ import CoreML
 
 class ViewController: UIViewController {
     
-    
     @IBOutlet weak var sentimentLabel: UILabel!
     
     @IBOutlet weak var textField: UITextField!
     
     let tSentimentClassifier = TwitterSentimentClassifier()
     
-    let swifter = Swifter(consumerKey: "LTReJyreyyuz4SWjVABuA1WKI", consumerSecret: "ajf107xfd6869heCG8Ptn8iztfFHBWPIxLkFGvsmoEwI7MKZcz")
+    let swifter = Swifter(consumerKey: "Consumer KEY /Replace with your own/", consumerSecret: "Consumer Secret /Replace with your own/")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     @IBAction func checkButtonPressed(_ sender: UIButton) {
