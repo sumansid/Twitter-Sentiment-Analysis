@@ -39,7 +39,6 @@ class ViewController: UIViewController {
                            
                        }
                        do {
-               
                            let predictions = try self.tSentimentClassifier.predictions(inputs: tweets)
                            var sentimentScore = 0
                            for prediction in predictions {
@@ -51,7 +50,6 @@ class ViewController: UIViewController {
                                }
                                
                            }
-                        print(sentimentScore)
                         if sentimentScore > 15 {
                             self.sentimentLabel.text = "😍"
                         } else if sentimentScore > 5 {
@@ -72,8 +70,6 @@ class ViewController: UIViewController {
                            print("An error making the prediction\(error)")
                            
                        }
-                        
-                       
                    }) { (error) in
                        print("Error with the twitter api request \(error)")
                    }
