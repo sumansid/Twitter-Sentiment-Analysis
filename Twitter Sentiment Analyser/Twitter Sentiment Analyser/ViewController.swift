@@ -10,7 +10,6 @@ import UIKit
 import SwifteriOS
 import CoreML
 
-
 class ViewController: UIViewController {
     
     @IBOutlet weak var sentimentLabel: UILabel!
@@ -35,8 +34,7 @@ class ViewController: UIViewController {
                            if let tweet = results[i]["full_text"].string {
                                let tweetForModel = TwitterSentimentClassifierInput(text: tweet)
                                tweets.append(tweetForModel)
-                               }
-                           
+                               } 
                        }
                        do {
                            let predictions = try self.tSentimentClassifier.predictions(inputs: tweets)
@@ -79,4 +77,3 @@ class ViewController: UIViewController {
     }
    
 }
-
